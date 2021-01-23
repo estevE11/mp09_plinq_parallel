@@ -24,14 +24,17 @@ namespace mp09_plinq_parallel
             timer.Start();
             CalcSerial(persones);
             timer.Stop();
-            Console.WriteLine("Time: " + timer.ElapsedMilliseconds);
+            Console.WriteLine("");
+            Console.WriteLine("Serial time: " + timer.ElapsedMilliseconds);
+            Console.WriteLine("");
 
             timer = new Stopwatch();
             // Parallel
             timer.Start();
             CalcParallel(persones);
             timer.Stop();
-            Console.WriteLine("Time: " + timer.ElapsedMilliseconds);
+            Console.WriteLine("");
+            Console.WriteLine("Parallel time: " + timer.ElapsedMilliseconds);
         }
 
         private void CalcSerial(List<Persona> persones)
