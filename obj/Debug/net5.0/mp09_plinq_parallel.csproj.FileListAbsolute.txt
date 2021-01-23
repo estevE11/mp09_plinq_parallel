@@ -1,0 +1,16 @@
+/home/esteve/dev/cs/mp09_plinq_parallel/bin/Debug/net5.0/mp09_plinq_parallel
+/home/esteve/dev/cs/mp09_plinq_parallel/bin/Debug/net5.0/mp09_plinq_parallel.deps.json
+/home/esteve/dev/cs/mp09_plinq_parallel/bin/Debug/net5.0/mp09_plinq_parallel.runtimeconfig.json
+/home/esteve/dev/cs/mp09_plinq_parallel/bin/Debug/net5.0/mp09_plinq_parallel.runtimeconfig.dev.json
+/home/esteve/dev/cs/mp09_plinq_parallel/bin/Debug/net5.0/mp09_plinq_parallel.dll
+/home/esteve/dev/cs/mp09_plinq_parallel/bin/Debug/net5.0/ref/mp09_plinq_parallel.dll
+/home/esteve/dev/cs/mp09_plinq_parallel/bin/Debug/net5.0/mp09_plinq_parallel.pdb
+/home/esteve/dev/cs/mp09_plinq_parallel/obj/Debug/net5.0/mp09_plinq_parallel.csprojAssemblyReference.cache
+/home/esteve/dev/cs/mp09_plinq_parallel/obj/Debug/net5.0/mp09_plinq_parallel.GeneratedMSBuildEditorConfig.editorconfig
+/home/esteve/dev/cs/mp09_plinq_parallel/obj/Debug/net5.0/mp09_plinq_parallel.AssemblyInfoInputs.cache
+/home/esteve/dev/cs/mp09_plinq_parallel/obj/Debug/net5.0/mp09_plinq_parallel.AssemblyInfo.cs
+/home/esteve/dev/cs/mp09_plinq_parallel/obj/Debug/net5.0/mp09_plinq_parallel.csproj.CoreCompileInputs.cache
+/home/esteve/dev/cs/mp09_plinq_parallel/obj/Debug/net5.0/mp09_plinq_parallel.dll
+/home/esteve/dev/cs/mp09_plinq_parallel/obj/Debug/net5.0/ref/mp09_plinq_parallel.dll
+/home/esteve/dev/cs/mp09_plinq_parallel/obj/Debug/net5.0/mp09_plinq_parallel.pdb
+/home/esteve/dev/cs/mp09_plinq_parallel/obj/Debug/net5.0/mp09_plinq_parallel.genruntimeconfig.cache
