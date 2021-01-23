@@ -41,7 +41,10 @@ namespace mp09_plinq_parallel
         }
         private char calcula_lletra(string Str)
         {
-            return 'A';
+            int n = Int32.Parse(Str.Substring(0, Str.Length - 1));
+            String l = Str.Substring(Str.Length - 1, 1);
+            int rest = n % 23;
+            return char.Parse(this.nif_validate_data[rest]);
         }
     }
 }
