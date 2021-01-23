@@ -1,4 +1,6 @@
-﻿using System;
+﻿using System.Threading.Tasks;
+using System.Diagnostics;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
@@ -15,18 +17,90 @@ namespace mp09_plinq_parallel
 
         private void start()
         {
-            this.loadPersones();
+            List<Persona> persones = this.loadPersones();
+            
+            Stopwatch timer = new Stopwatch();
+            // Serial
+            timer.Start();
+            CalcSerial(persones);
+            timer.Stop();
+            Console.WriteLine("Time: " + timer.ElapsedMilliseconds);
+
+            timer = new Stopwatch();
+            // Parallel
+            timer.Start();
+            CalcParallel(persones);
+            timer.Stop();
+            Console.WriteLine("Time: " + timer.ElapsedMilliseconds);
         }
 
-        private void loadPersones()
+        private void CalcSerial(List<Persona> persones)
+        {            
+            int nomsCorrectes = 0;
+            int nomsIncorrectes = 0;
+            int dniCorrectes = 0;
+            int dniIncorrectes = 0;
+            int emailCorrectes = 0;
+            int emailIncorrectes = 0;
+            foreach (Persona p in persones)
+            {
+                if (p.comprova_nom()) nomsCorrectes++;
+                else nomsIncorrectes++;
+                if (p.comprova_dni()) dniCorrectes++;
+                else dniIncorrectes++;
+                if (p.comprova_mail()) emailCorrectes++;
+                else emailIncorrectes++;
+            }
+            Console.WriteLine("noms: " + nomsCorrectes + "/" + (nomsIncorrectes + nomsCorrectes));
+            Console.WriteLine("dni: " + dniCorrectes + "/" + (dniIncorrectes + dniCorrectes));
+            Console.WriteLine("emails: " + emailCorrectes + "/" + (emailIncorrectes + emailCorrectes));
+        }
+        private void CalcParallel(List<Persona> persones)
+        {
+            int nomsCorrectes = 0;
+            int nomsIncorrectes = 0;
+            int dniCorrectes = 0;
+            int dniIncorrectes = 0;
+            int emailCorrectes = 0;
+            int emailIncorrectes = 0;
+
+            Parallel.Invoke(
+                () =>
+                {
+                    foreach (Persona p in persones)
+                    {
+                        if (p.comprova_nom()) nomsCorrectes++;
+                        else nomsIncorrectes++;
+                    }
+                },
+                () =>
+                {
+                    foreach (Persona p in persones)
+                    {
+                        if (p.comprova_dni()) dniCorrectes++;
+                        else dniIncorrectes++;
+                    }
+                },
+                () =>
+                {
+                    foreach (Persona p in persones)
+                    {
+                        if (p.comprova_mail()) emailCorrectes++;
+                        else emailIncorrectes++;
+                    }
+                }
+            );
+
+            Console.WriteLine("noms: " + nomsCorrectes + "/" + (nomsIncorrectes + nomsCorrectes));
+            Console.WriteLine("dni: " + dniCorrectes + "/" + (dniIncorrectes + dniCorrectes));
+            Console.WriteLine("emails: " + emailCorrectes + "/" + (emailIncorrectes + emailCorrectes));
+        }
+
+        private List<Persona> loadPersones()
         {
             string json = File.ReadAllText("people.json");
             List<Persona> persones = JsonConvert.DeserializeObject<List<Persona>>(json);
-            foreach (Persona p in persones)
-            {
-                bool valid = p.comprova_dni() && p.comprova_mail() && p.comprova_nom();
-                Console.WriteLine(p.Name + ", " + p.email + ", " + p.dni + "(" + valid + ")");
-            }
+            return persones;
         }
     }
 }
