@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "GLjkPdutz89MpSB2nlgbyLroH4E1VCzK01+KUkEgPHOj/oRcjSAYOUyeZcqoTDccJEfxqxU0NkEnU0k2PcYZrg==",
+  "dgSpecHash": "yvSjfRaBV0lJGJ2IiauZ9P6C69aOe2DcRikfziMKkbyR2TjYCNOFBNKmmDKjCnQo2H7/g+zrKibj6ohA8WeMtA==",
   "success": true,
   "projectFilePath": "/home/esteve/dev/cs/mp09_plinq_parallel/mp09_plinq_parallel.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/esteve/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

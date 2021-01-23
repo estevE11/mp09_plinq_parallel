@@ -14,3 +14,5 @@
 /home/esteve/dev/cs/mp09_plinq_parallel/obj/Debug/net5.0/ref/mp09_plinq_parallel.dll
 /home/esteve/dev/cs/mp09_plinq_parallel/obj/Debug/net5.0/mp09_plinq_parallel.pdb
 /home/esteve/dev/cs/mp09_plinq_parallel/obj/Debug/net5.0/mp09_plinq_parallel.genruntimeconfig.cache
+/home/esteve/dev/cs/mp09_plinq_parallel/bin/Debug/net5.0/Newtonsoft.Json.dll
+/home/esteve/dev/cs/mp09_plinq_parallel/obj/Debug/net5.0/mp09_plinq_parallel.csproj.CopyComplete
